@@ -23,8 +23,9 @@ namespace LabsCenter
         protected override void OnStart()
         {
             AppCenter.Start("android=8a2eba08-a41d-4765-9e55-2231026c41e3;" +
-                              "ios={Your iOS App secret here}",
+                              "ios=cae03651-4a45-424c-89d8-78065f56a7f3;",
                               typeof(Analytics), typeof(Crashes));
+            Crashes.GenerateTestCrash();
         }
 
         protected override void OnSleep()
